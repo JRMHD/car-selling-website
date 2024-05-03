@@ -70,6 +70,25 @@
                  </div>
              </div>
          </div>
+
+         <div class="row">
+             <div class="col-md-6">
+                 <h2 class="ftco-heading-2" style="color: #fff;">Subscribe to Our Newsletter</h2>
+                 <form action="#" class="subscribe-form" style="margin-bottom: 30px;">
+                     <div style="display: flex; margin-bottom: 20px;">
+                         <input type="text" class="form-control" placeholder="Enter your name"
+                             style="flex: 1; border-radius: 30px; padding: 15px;">
+                     </div>
+                     <div style="display: flex; margin-bottom: 20px;">
+                         <input type="email" class="form-control" placeholder="Enter your email"
+                             style="flex: 1; border-radius: 30px; padding: 15px;">
+                     </div>
+                     <button type="submit" class="btn btn-primary btn-lg btn-block"
+                         style="border-radius: 30px; padding: 15px; background-color: #007bff; border: none; color: #fff; transition: background-color 0.3s ease;">Subscribe</button>
+                 </form>
+             </div>
+         </div>
+
          <div class="row">
              <div class="col-md-12 text-center">
                  <p>

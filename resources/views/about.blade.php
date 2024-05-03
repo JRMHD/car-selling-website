@@ -122,7 +122,7 @@
                             here at Ndoch Cars & Imports.
                         </p>
                         <p>
-                            <a href="#" class="btn btn-primary py-3 px-4">Search Vehicles</a>
+                            <a href="{{ url('car') }}" class="btn btn-primary py-3 px-4">Search Vehicles</a>
                         </p>
                     </div>
                 </div>

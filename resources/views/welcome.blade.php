@@ -90,7 +90,7 @@
                             our extensive inventory in Nairobi and drive away with your
                             perfect vehicle today.
                         </p>
-                        <a href="https://vimeo.com/45830194"
+                        <a href="https://www.youtube.com/watch?v=O_5goaab_1Q"
                             class="icon-wrap popup-vimeo d-flex align-items-center mt-4 justify-content-center">
                             <div class="icon d-flex align-items-center justify-content-center">
                                 <span class="ion-ios-play"></span>
@@ -186,7 +186,8 @@
                                     </div>
                                 </div>
                                 <p>
-                                    <a href="#" class="btn btn-primary py-3 px-4">Browse Our Inventory</a>
+                                    <a href="{{ url('car') }}" class="btn btn-primary py-3 px-4">Browse Our
+                                        Inventory</a>
                                 </p>
                             </div>
                         </div>
