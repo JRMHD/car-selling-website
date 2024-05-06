@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PostController;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,6 +33,9 @@ Route::get('car', function () {
 Route::get('contact', function () {
     return view('contact');
 });
+Route::get('index', function () {
+    return view('index');
+});
 
 
 Route::get('/dashboard', function () {
@@ -44,4 +48,13 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';
+
+
+
+Route::get('/posts', [PostController::class, 'index']);
+Route::get('/posts/create', [PostController::class, 'create']);
+Route::post('/posts', [PostController::class, 'store']);
+Route::get('/posts/{id}', [PostController::class, 'show']); // This route remains the same
+Route::post('/posts', [PostController::class, 'store'])->name('posts.store');
+Route::get('/posts', [PostController::class, 'index'])->name('posts.index');
