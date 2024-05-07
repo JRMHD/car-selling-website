@@ -111,33 +111,53 @@
                 <div class="col-md-12 featured-top">
                     <div class="row no-gutters">
                         <div class="col-md-4 d-flex align-items-center">
-                            <form action="#" class="request-form ftco-animate bg-primary">
+                            <form action="{{ route('car-request.store') }}" method="POST"
+                                class="request-form ftco-animate bg-primary">
+                                @csrf
                                 <h2>Find Your Dream Car</h2>
                                 <div class="form-group">
                                     <label for="car-make" class="label">Car Make</label>
-                                    <input type="text" class="form-control" id="car-make"
+                                    <input type="text" class="form-control" id="car-make" name="car_make"
                                         placeholder="e.g., Toyota, BMW, Honda" />
                                 </div>
                                 <div class="form-group">
                                     <label for="car-model" class="label">Car Model</label>
-                                    <input type="text" class="form-control" id="car-model"
+                                    <input type="text" class="form-control" id="car-model" name="car_model"
                                         placeholder="e.g., Corolla, X5, Civic" />
                                 </div>
                                 <div class="form-group">
                                     <label for="max-price" class="label">Maximum Price</label>
-                                    <input type="number" class="form-control" id="max-price"
+                                    <input type="number" class="form-control" id="max-price" name="max_price"
                                         placeholder="Maximum Price in KES" />
                                 </div>
                                 <div class="form-group">
                                     <label for="min-year" class="label">Minimum Year</label>
-                                    <input type="number" class="form-control" id="min-year"
+                                    <input type="number" class="form-control" id="min-year" name="min_year"
                                         placeholder="Minimum Year" />
+                                </div>
+                                <div class="form-group">
+                                    <label for="user-name" class="label">Your Name</label>
+                                    <input type="text" class="form-control" id="user-name" name="user_name"
+                                        placeholder="Your Name" />
+                                </div>
+                                <div class="form-group">
+                                    <label for="user-phone" class="label">Your Phone Number</label>
+                                    <input type="tel" class="form-control" id="user-phone" name="user_phone"
+                                        placeholder="Your Phone Number" />
                                 </div>
                                 <div class="form-group">
                                     <input type="submit" value="Find Your Car Now"
                                         class="btn btn-secondary py-3 px-4" />
                                 </div>
+                                @if (session('success'))
+                                    <div class="alert alert-success">
+                                        {{ session('success') }}
+                                    </div>
+                                @endif
                             </form>
+
+
+
                         </div>
                         <div class="col-md-8 d-flex align-items-center">
                             <div class="services-wrap rounded-right w-100">
@@ -197,6 +217,8 @@
         </div>
     </section>
 
+
+
     <section class="ftco-section ftco-no-pt bg-light">
         <div class="container">
             <div class="row justify-content-center">
@@ -205,80 +227,7 @@
                     <h2 class="mb-2">Feeatured Vehicles</h2>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="carousel-car owl-carousel">
-                        <div class="item">
-                            <div class="car-wrap rounded ftco-animate">
-                                <div class="img rounded d-flex align-items-end"
-                                    style="background-image: url(images/car-1.jpg)"></div>
-                                <div class="text">
-                                    <h2 class="mb-0"><a href="#">Mercedes Grand Sedan</a></h2>
-                                    <div class="d-flex mb-3">
-                                        <span class="cat">Cheverolet</span>
-                                        <p class="price ml-auto">$500 <span>/day</span></p>
-                                    </div>
-                                    <p class="d-flex mb-0 d-block">
-                                        <a href="#" class="btn btn-primary py-2 mr-1">Book now</a>
-                                        <a href="#" class="btn btn-secondary py-2 ml-1">Details</a>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="car-wrap rounded ftco-animate">
-                                <div class="img rounded d-flex align-items-end"
-                                    style="background-image: url(images/car-2.jpg)"></div>
-                                <div class="text">
-                                    <h2 class="mb-0"><a href="#">Mercedes Grand Sedan</a></h2>
-                                    <div class="d-flex mb-3">
-                                        <span class="cat">Cheverolet</span>
-                                        <p class="price ml-auto">$500 <span>/day</span></p>
-                                    </div>
-                                    <p class="d-flex mb-0 d-block">
-                                        <a href="#" class="btn btn-primary py-2 mr-1">Book now</a>
-                                        <a href="#" class="btn btn-secondary py-2 ml-1">Details</a>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="car-wrap rounded ftco-animate">
-                                <div class="img rounded d-flex align-items-end"
-                                    style="background-image: url(images/car-3.jpg)"></div>
-                                <div class="text">
-                                    <h2 class="mb-0"><a href="#">Mercedes Grand Sedan</a></h2>
-                                    <div class="d-flex mb-3">
-                                        <span class="cat">Cheverolet</span>
-                                        <p class="price ml-auto">$500 <span>/day</span></p>
-                                    </div>
-                                    <p class="d-flex mb-0 d-block">
-                                        <a href="#" class="btn btn-primary py-2 mr-1">Book now</a>
-                                        <a href="#" class="btn btn-secondary py-2 ml-1">Details</a>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="car-wrap rounded ftco-animate">
-                                <div class="img rounded d-flex align-items-end"
-                                    style="background-image: url(images/car-4.jpg)"></div>
-                                <div class="text">
-                                    <h2 class="mb-0"><a href="#">Mercedes Grand Sedan</a></h2>
-                                    <div class="d-flex mb-3">
-                                        <span class="cat">Cheverolet</span>
-                                        <p class="price ml-auto">$500 <span>/day</span></p>
-                                    </div>
-                                    <p class="d-flex mb-0 d-block">
-                                        <a href="#" class="btn btn-primary py-2 mr-1">Book now</a>
-                                        <a href="#" class="btn btn-secondary py-2 ml-1">Details</a>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            @include('cardisplay')
         </div>
     </section>
 

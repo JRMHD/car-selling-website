@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Carbook - Free Bootstrap 4 Template by Colorlib</title>
+    <title>Contact Us - Ndoch Cars & Imports</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <link rel="icon" href="images/ndoch-logo.ico" type="image/x-icon">
