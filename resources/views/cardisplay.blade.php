@@ -129,7 +129,7 @@
                     <div id="carouselExampleControls3" class="carousel slide" data-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img src="images/car-3.jpg" class="d-block w-100" alt="Car Image 3">
+                                <img src="images\premio3.jpg" class="d-block w-100" alt="Car Image 3">
                             </div>
                             <div class="carousel-item">
                                 <img src="images\premio1.jpg" class="d-block w-100" alt="Car Image 3">
@@ -137,9 +137,7 @@
                             <div class="carousel-item">
                                 <img src="images\premio2.jpg" class="d-block w-100" alt="Car Image 3">
                             </div>
-                            <div class="carousel-item">
-                                <img src="images\premio3.jpg" class="d-block w-100" alt="Car Image 3">
-                            </div>
+
                             <div class="carousel-item">
                                 <img src="images\premio4.jpg" class="d-block w-100" alt="Car Image 3">
                             </div>

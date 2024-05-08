@@ -23,13 +23,16 @@
                      </p>
                      <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
                          <li class="ftco-animate">
-                             <a href="#"><span class="fab fa-facebook"></span></a>
+                             <a href="https://www.facebook.com/Ndochcars?mibextid=LQQJ4d"><span
+                                     class="fab fa-facebook"></span></a>
                          </li>
                          <li class="ftco-animate">
-                             <a href="#"><span class="fab fa-twitter"></span></a>
+                             <a href="https://www.facebook.com/Ndochcars?mibextid=LQQJ4d"><span
+                                     class="fab fa-twitter"></span></a>
                          </li>
                          <li class="ftco-animate">
-                             <a href="#"><span class="fab fa-instagram"></span></a>
+                             <a href="https://www.facebook.com/Ndochcars?mibextid=LQQJ4d"><span
+                                     class="fab fa-instagram"></span></a>
                          </li>
                      </ul>
                  </div>
@@ -51,7 +54,7 @@
                          <ul>
                              <li>
                                  <span class="icon icon-map-marker"></span>
-                                 <span class="text">123 Main Street, Nairobi, Kenya</span>
+                                 <span class="text">Kiambu road fourways, Nairobi, Kenya</span>
                              </li>
                              <li>
                                  <a href="tel:+254712345678">
@@ -60,9 +63,9 @@
                                  </a>
                              </li>
                              <li>
-                                 <a href="mailto:info@ndochcars.com">
+                                 <a href="mailto:ndochcars@gmail.com">
                                      <span class="icon icon-envelope"></span>
-                                     <span class="text">info@ndochcars.com</span>
+                                     <span class="text">ndochcars@gmail.com</span>
                                  </a>
                              </li>
                          </ul>

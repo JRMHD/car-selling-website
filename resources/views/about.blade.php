@@ -141,7 +141,7 @@
                         by selling quality cars. Join our network of sellers and start
                         making money.
                     </p>
-                    <a href="#" class="btn btn-primary btn-lg">Become a Seller</a>
+                    <a href="{{ url('sellwithus') }}" class="btn btn-primary btn-lg">Become a Seller</a>
                 </div>
             </div>
         </div>

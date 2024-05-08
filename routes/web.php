@@ -4,6 +4,9 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SubscriptionController;
 use App\Http\Controllers\CarRequestController;
+use App\Http\Controllers\ContactController;
+use App\Http\Controllers\VehicleController;
+
 
 
 
@@ -36,7 +39,9 @@ Route::get('car', function () {
 Route::get('contact', function () {
     return view('contact');
 });
-
+Route::get('sellwithus', function () {
+    return view('sellwithus');
+});
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -54,3 +59,7 @@ Route::post('/car-request', 'CarRequestController@store')->name('car-request.sto
 Route::post('/car-request', [CarRequestController::class, 'store'])->name('car-request.store');
 Route::post('/subscribe', [SubscriptionController::class, 'subscribe'])->name('subscribe');
 Route::post('/subscribe', [SubscriptionController::class, 'subscribe'])->name('subscribe');
+
+
+Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
+Route::post('/vehicle/store', [VehicleController::class, 'store'])->name('vehicle.store');
