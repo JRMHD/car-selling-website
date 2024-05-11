@@ -35,40 +35,34 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar"
+        style="height: 70px;">
         <div class="container">
             <a class="navbar-brand" href="{{ url('/') }}">
-                <img src="images\ndochwhite.png" alt="NdochCars & Imports Logo" class="navbar-logo" />
+                <img src="images\ndochwhite.png" alt="NdochCars & Imports Logo"
+                    style="max-height: 100px; width: auto;" />
             </a>
-            <style>
-                .navbar-logo {
-                    max-height: 130px;
-                    /* Adjust as needed */
-                    width: auto;
-                }
-            </style>
-
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
-                aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="oi oi-menu"></span> Menu
+                aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation"
+                style="height: 30px; padding: 5px;">
+                <span class="oi oi-menu" style="font-size: 20px;"></span>
             </button>
-
             <div class="collapse navbar-collapse" id="ftco-nav">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active">
-                        <a href="{{ url('/') }}" class="nav-link">Home</a>
+                        <a href="{{ url('/') }}" class="nav-link" style="font-size: 14px;">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a href="{{ url('about') }}" class="nav-link">About</a>
+                        <a href="{{ url('about') }}" class="nav-link" style="font-size: 14px;">About</a>
                     </li>
                     <li class="nav-item">
-                        <a href="{{ url('services') }}" class="nav-link">Services</a>
+                        <a href="{{ url('services') }}" class="nav-link" style="font-size: 14px;">Services</a>
                     </li>
                     <li class="nav-item">
-                        <a href="{{ url('car') }}" class="nav-link">Cars</a>
+                        <a href="{{ url('car') }}" class="nav-link" style="font-size: 14px;">Cars</a>
                     </li>
                     <li class="nav-item">
-                        <a href="{{ url('contact') }}" class="nav-link">Contact</a>
+                        <a href="{{ url('contact') }}" class="nav-link" style="font-size: 14px;">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -114,7 +108,7 @@
                             <form action="{{ route('car-request.store') }}" method="POST"
                                 class="request-form ftco-animate bg-primary">
                                 @csrf
-                                <h2>Find Your Dream Car</h2>
+                                <h2>Search Vehicle</h2>
                                 <div class="form-group">
                                     <label for="car-make" class="label">Car Make</label>
                                     <input type="text" class="form-control" id="car-make" name="car_make"
@@ -146,8 +140,7 @@
                                         placeholder="Your Phone Number" />
                                 </div>
                                 <div class="form-group">
-                                    <input type="submit" value="Find Your Car Now"
-                                        class="btn btn-secondary py-3 px-4" />
+                                    <input type="submit" value="Search" class="btn btn-secondary py-3 px-4" />
                                 </div>
                                 @if (session('success'))
                                     <div class="alert alert-success">
@@ -248,90 +241,7 @@
         </div>
     </section>
 
-    <section class="ftco-section testimony-section bg-light">
-        <div class="container">
-            <div class="row justify-content-center mb-5">
-                <div class="col-md-7 text-center heading-section ftco-animate">
-                    <span class="subheading">Testimonial</span>
-                    <h2 class="mb-3">Happy Clients</h2>
-                </div>
-            </div>
-            <div class="row ftco-animate">
-                <div class="col-md-12">
-                    <div class="carousel-testimony owl-carousel ftco-owl">
-                        <div class="item">
-                            <div class="testimony-wrap rounded text-center py-4 pb-5">
-                                <div class="user-img mb-2" style="background-image: url(images/person_1.jpg)"></div>
-                                <div class="text pt-4">
-                                    <p class="mb-4">
-                                        I am very pleased with the quality of service provided by
-                                        Ndoch Cars & Imports. The process of buying my car was
-                                        smooth and hassle-free.
-                                    </p>
-                                    <p class="name">Wanjiku Kimani</p>
-                                    <span class="position">Nairobi, Kenya</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="testimony-wrap rounded text-center py-4 pb-5">
-                                <div class="user-img mb-2" style="background-image: url(images/person_2.jpg)"></div>
-                                <div class="text pt-4">
-                                    <p class="mb-4">
-                                        I would like to thank Ndoch Cars & Imports for helping me
-                                        find the perfect car for my needs. The customer service
-                                        was exceptional.
-                                    </p>
-                                    <p class="name">Ochieng Odhiambo</p>
-                                    <span class="position">Kisumu, Kenya</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="testimony-wrap rounded text-center py-4 pb-5">
-                                <div class="user-img mb-2" style="background-image: url(images/person_3.jpg)"></div>
-                                <div class="text pt-4">
-                                    <p class="mb-4">
-                                        Ndoch Cars & Imports exceeded my expectations. They helped
-                                        me find the perfect car within my budget. Highly
-                                        recommended!
-                                    </p>
-                                    <p class="name">Chebet Rotich</p>
-                                    <span class="position">Eldoret, Kenya</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="testimony-wrap rounded text-center py-4 pb-5">
-                                <div class="user-img mb-2" style="background-image: url(images/akinyi.jpg)"></div>
-                                <div class="text pt-4">
-                                    <p class="mb-4">
-                                        I had a great experience buying a car from Ndoch Cars &
-                                        Imports. The staff was friendly and knowledgeable.
-                                    </p>
-                                    <p class="name">Akinyi Wambui</p>
-                                    <span class="position">Nakuru, Kenya</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="testimony-wrap rounded text-center py-4 pb-5">
-                                <div class="user-img mb-2" style="background-image: url(images/person_4.jpg)"></div>
-                                <div class="text pt-4">
-                                    <p class="mb-4">
-                                        Ndoch Cars & Imports made the car buying process simple
-                                        and stress-free. I'm very satisfied with my purchase.
-                                    </p>
-                                    <p class="name">Wambui Mwangi</p>
-                                    <span class="position">Thika, Kenya</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+
 
     <section class="ftco-section bg-light">
         <div class="container">

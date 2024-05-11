@@ -35,41 +35,41 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar"
+        style="height: 70px;">
         <div class="container">
             <a class="navbar-brand" href="{{ url('/') }}">
-                <img src="images\ndochwhite.png" alt="NdochCars & Imports Logo" class="navbar-logo" />
+                <img src="images\ndochwhite.png" alt="NdochCars & Imports Logo"
+                    style="max-height: 100px; width: auto;" />
             </a>
             <style>
                 .navbar-logo {
-                    max-height: 130px;
+                    max-height: 50px;
                     /* Adjust as needed */
                     width: auto;
                 }
             </style>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
-                aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="oi oi-menu"></span> Menu
+                aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation"
+                style="height: 30px; padding: 5px;">
+                <span class="oi oi-menu" style="font-size: 20px;">Menu</span>
             </button>
-
             <div class="collapse navbar-collapse" id="ftco-nav">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a href="{{ url('/') }}" class="nav-link">Home</a>
+                        <a href="{{ url('/') }}" class="nav-link" style="font-size: 14px;">Home</a>
                     </li>
                     <li class="nav-item active">
-                        <a href="{{ url('about') }}" class="nav-link">About</a>
+                        <a href="{{ url('about') }}" class="nav-link" style="font-size: 14px;">About</a>
                     </li>
                     <li class="nav-item">
-                        <a href="{{ url('services') }}" class="nav-link">Services</a>
+                        <a href="{{ url('services') }}" class="nav-link" style="font-size: 14px;">Services</a>
                     </li>
-
                     <li class="nav-item">
-                        <a href="{{ url('car') }}" class="nav-link">Cars</a>
+                        <a href="{{ url('car') }}" class="nav-link" style="font-size: 14px;">Cars</a>
                     </li>
-
                     <li class="nav-item">
-                        <a href="{{ url('contact') }}" class="nav-link">Contact</a>
+                        <a href="{{ url('contact') }}" class="nav-link" style="font-size: 14px;">Contact</a>
                     </li>
                 </ul>
             </div>
