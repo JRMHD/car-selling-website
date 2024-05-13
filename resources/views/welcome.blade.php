@@ -105,8 +105,7 @@
                 <div class="col-md-12 featured-top">
                     <div class="row no-gutters">
                         <div class="col-md-4 d-flex align-items-center">
-                            <form action="{{ route('car-request.store') }}" method="POST"
-                                class="request-form ftco-animate bg-primary">
+                            <form class="request-form ftco-animate bg-primary">
                                 @csrf
                                 <h2>Search Vehicle</h2>
                                 <div class="form-group">

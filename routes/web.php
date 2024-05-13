@@ -6,7 +6,7 @@ use App\Http\Controllers\SubscriptionController;
 use App\Http\Controllers\CarRequestController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\VehicleController;
-
+use App\Http\Controllers\PostController;
 
 
 
@@ -62,4 +62,15 @@ Route::post('/subscribe', [SubscriptionController::class, 'subscribe'])->name('s
 
 
 Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
-Route::post('/vehicle/store', [VehicleController::class, 'store'])->name('vehicle.store');
+
+
+
+
+Route::resource('posts', PostController::class);
+
+Route::get('/posts', [PostController::class, 'index']);
+Route::get('/posts/create', [PostController::class, 'create']);
+Route::post('/posts', [PostController::class, 'store']);
+Route::get('/posts/{id}', [PostController::class, 'show']); // This route remains the same
+Route::post('/posts', [PostController::class, 'store'])->name('posts.store');
+Route::get('/posts', [PostController::class, 'index'])->name('posts.index');
