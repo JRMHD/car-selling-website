@@ -219,7 +219,11 @@
                     <h2 class="mb-2">Feeatured Vehicles</h2>
                 </div>
             </div>
-            @include('cardisplay')
+
+
+            @include('user.index', ['posts' => $posts])
+
+
         </div>
     </section>
 

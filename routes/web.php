@@ -7,6 +7,9 @@ use App\Http\Controllers\CarRequestController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\VehicleController;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\WelcomeController;
+use App\Http\Controllers\CarController;
+
 
 
 
@@ -74,3 +77,12 @@ Route::post('/posts', [PostController::class, 'store']);
 Route::get('/posts/{id}', [PostController::class, 'show']); // This route remains the same
 Route::post('/posts', [PostController::class, 'store'])->name('posts.store');
 Route::get('/posts', [PostController::class, 'index'])->name('posts.index');
+Route::get('/posts/create', [PostController::class, 'create'])->name('posts.create');
+
+Route::get('/', [WelcomeController::class, 'welcome']);
+Route::get('/car', [CarController::class, 'index']);
+
+
+Route::group(['middleware' => 'auth'], function () {
+    Route::get('/posts/create', [PostController::class, 'create'])->name('posts.create');
+});

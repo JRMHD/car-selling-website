@@ -93,7 +93,8 @@
         </div>
     </section>
 
-    @include('cardisplay')
+    @include('user.index', ['posts' => $posts])
+
 
     @include('footer')
 

@@ -9,5 +9,23 @@ class Post extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['title', 'content', 'image', 'price'];
+    protected $fillable = [
+        'name',
+        'model',
+        'transmission',
+        'drive',
+        'engine_type',
+        'engine_size',
+        'fuel',
+        'year',
+        'chessis',
+        'color',
+        'doors',
+        'seats',
+        'price',
+        'body_type',
+        'mileage',
+        'status',
+        'image',
+    ];
 }

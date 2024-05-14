@@ -13,13 +13,27 @@ return new class extends Migration
     {
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
-            $table->text('content');
-            $table->string('image')->nullable();
-            $table->decimal('price', 8, 2)->nullable(); // Add this line for the price field
+            $table->text('name');
+            $table->text('model');
+            $table->text('transmission');
+            $table->text('drive');
+            $table->text('engine_type');
+            $table->text('engine_size');
+            $table->text('fuel');
+            $table->text('year');
+            $table->text('chessis');
+            $table->text('color');
+            $table->text('doors');
+            $table->text('seats');
+            $table->text('price');
+            $table->text('body_type');
+            $table->text('mileage');
+            $table->text('status');
+            $table->text('image')->nullable();
             $table->timestamps();
         });
     }
+
 
     /**
      * Reverse the migrations.

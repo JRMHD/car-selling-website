@@ -1,32 +1,55 @@
 <?php
 
-// app/Http/Controllers/PostController.php
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Post;
+use Illuminate\Support\Facades\Storage;
 
 class PostController extends Controller
 {
     public function index()
     {
-        $posts = Post::latest()->get();
-
+        $posts = Post::latest()->paginate(9); // Paginate the posts
         return view('user.index', compact('posts'));
     }
 
+
+
+
+
+
     public function create()
     {
-        return view('posts.create');
+        if (auth()->check()) {
+            return view('posts.create');
+        } else {
+            return redirect()->route('login')->withErrors(['You must be logged in to access this page.']);
+        }
     }
 
     public function store(Request $request)
     {
-        $request->validate([
-            'title' => 'required',
-            'content' => 'required',
-            'image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+        $validatedData = $request->validate([
+            'name' => 'required',
+            'model' => 'required',
+            'transmission' => 'required',
+            'drive' => 'required',
+            'engine_type' => 'required',
+            'engine_size' => 'required',
+            'fuel' => 'required',
+            'year' => 'required',
+            'chessis' => 'required',
+            'color' => 'required',
+            'doors' => 'required',
+            'seats' => 'required',
             'price' => 'required',
+            'body_type' => 'required',
+            'mileage' => 'required',
+            'status' => 'required',
+            'image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:100000',
+        ], [
+            // Custom error messages
         ]);
 
         $postData = $request->all();
@@ -36,9 +59,13 @@ class PostController extends Controller
             $postData['image'] = $imagePath;
         }
 
-        Post::create($postData);
+        $post = Post::create($postData);
 
-        return redirect()->route('posts.index')->with('success', 'Post created successfully!');
+        if ($post) {
+            return redirect()->route('posts.create')->with('success', 'Post created successfully!');
+        } else {
+            return redirect()->back()->withInput()->with('error', 'Failed to create post. Please try again.');
+        }
     }
 
     public function show($id)
@@ -55,23 +82,47 @@ class PostController extends Controller
 
     public function update(Request $request, $id)
     {
-        $request->validate([
-            'title' => 'required',
-            'content' => 'required',
+        $validatedData = $request->validate([
+            'name' => 'required',
+            'model' => 'required',
+            'transmission' => 'required',
+            'drive' => 'required',
+            'engine_type' => 'required',
+            'engine_size' => 'required',
+            'fuel' => 'required',
+            'year' => 'required',
+            'color' => 'required',
+            'doors' => 'required',
+            'seats' => 'required',
+            'price' => 'required',
+            'body_type' => 'required',
+            'mileage' => 'required',
+            'status' => 'required',
             'image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:10000',
-            'price' => 'numeric|nullable',
+        ], [
+            // Custom error messages
         ]);
 
         $postData = $request->all();
 
         if ($request->hasFile('image')) {
+            // Delete the old image if it exists
+            $post = Post::findOrFail($id);
+            if ($post->image) {
+                Storage::delete($post->image);
+            }
+
             $imagePath = $request->file('image')->store('images', 'public');
             $postData['image'] = $imagePath;
         }
 
         $post = Post::findOrFail($id);
-        $post->update($postData);
+        $updated = $post->update($postData);
 
-        return redirect()->route('posts.index')->with('success', 'Post updated successfully!');
+        if ($updated) {
+            return redirect()->route('posts.create')->with('success', 'Post updated successfully!');
+        } else {
+            return redirect()->back()->withInput()->with('error', 'Failed to update post. Please try again.');
+        }
     }
 }
