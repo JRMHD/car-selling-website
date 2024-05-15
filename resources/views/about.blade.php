@@ -82,7 +82,7 @@
         <div class="overlay"></div>
         <div class="container">
             <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-start">
-                <div class="col-md-9 ftco-animate pb-5">
+                <div class="col-md-9  pb-5">
                     <p class="breadcrumbs">
                         <span class="mr-2"><a href="{{ url('/') }}">Home <i
                                     class="ion-ios-arrow-forward"></i></a></span>
@@ -99,7 +99,7 @@
             <div class="row no-gutters">
                 <div class="col-md-6 p-md-5 img img-2 d-flex justify-content-center align-items-center"
                     style="background-image: url(images/about.jpg)"></div>
-                <div class="col-md-6 wrap-about ftco-animate">
+                <div class="col-md-6 wrap-about ">
                     <div class="heading-section heading-section-white pl-md-5">
                         <span class="subheading">About Us</span>
                         <h2 class="mb-4">Welcome to Ndoch Cars & Imports</h2>
@@ -134,7 +134,7 @@
         <div class="overlay"></div>
         <div class="container">
             <div class="row justify-content-end">
-                <div class="col-md-6 heading-section heading-section-white ftco-animate">
+                <div class="col-md-6 heading-section heading-section-white ">
                     <h2 class="mb-3">Join Our Team and Start Selling Cars Today!</h2>
                     <p>
                         We're looking for passionate individuals who want to earn with us

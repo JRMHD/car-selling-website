@@ -81,7 +81,7 @@
         <div class="overlay"></div>
         <div class="container">
             <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-start">
-                <div class="col-md-9 ftco-animate pb-5">
+                <div class="col-md-9  pb-5">
                     <p class="breadcrumbs">
                         <span class="mr-2"><a href="{{ url('/') }}">Home <i
                                     class="ion-ios-arrow-forward"></i></a></span>
@@ -96,7 +96,7 @@
     <section class="ftco-section">
         <div class="container">
             <div class="row justify-content-center mb-5">
-                <div class="col-md-7 text-center heading-section ftco-animate">
+                <div class="col-md-7 text-center heading-section ">
                     <span class="subheading">Our Services</span>
                     <h2 class="mb-3">Explore Our Latest Offerings</h2>
                 </div>
@@ -173,7 +173,7 @@
         <div class="overlay"></div>
         <div class="container">
             <div class="row justify-content-end">
-                <div class="col-md-6 heading-section heading-section-white ftco-animate">
+                <div class="col-md-6 heading-section heading-section-white ">
                     <h2 class="mb-3">Join Our Team and Start Selling Cars Today!</h2>
                     <p>
                         We're looking for passionate individuals who want to earn with us

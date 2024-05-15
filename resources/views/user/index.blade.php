@@ -76,29 +76,25 @@
                             <p><strong>Mileage:</strong> {{ $post->mileage }}</p>
                             <div class="d-flex justify-content-between">
                                 <a href="https://wa.me/254714428171?text=I'm%20interested%20in%20{{ urlencode($post->name) }}"
-                                    class="btn whatsapp-btn"
-                                    style="background-color: #25D366; color: #fff; font-size: 18px; padding: 12px 24px; border-radius: 30px; transition: background-color 0.3s, transform 0.3s; text-decoration: none; display: inline-flex; align-items: center;">
-                                    <i class="fab fa-whatsapp mr-2" style="font-size: 20px;"></i> <span>Enquire Via
-                                        WhatsApp</span>
+                                    class="btn btn-success btn-sm whatsapp-btn" style="border-radius: 20px;">
+                                    <i class="fab fa-whatsapp mr-2"></i> <span>Enquire Via WhatsApp</span>
                                 </a>
-                                <a href="tel:+254714428171" class="btn call-btn"
-                                    style="background-color: #333; color: #fff; font-size: 18px; padding: 12px 24px; border-radius: 30px; transition: background-color 0.3s, transform 0.3s; text-decoration: none; display: inline-flex; align-items: center;">
-                                    <i class="fas fa-phone-alt mr-2" style="font-size: 20px;"></i> <span>Call to
-                                        Book</span>
+                                <a href="tel:+254714428171" class="btn btn-dark btn-sm call-btn"
+                                    style="border-radius: 20px;">
+                                    <i class="fas fa-phone-alt mr-2"></i> <span>Call to Book</span>
                                 </a>
                             </div>
 
                             <style>
                                 .whatsapp-btn:hover {
                                     background-color: #1e9c52;
-                                    transform: translateY(-2px);
                                 }
 
                                 .call-btn:hover {
                                     background-color: #1a1a1a;
-                                    transform: translateY(-2px);
                                 }
                             </style>
+
                         </div>
                     </div>
                 </div>

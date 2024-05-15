@@ -75,7 +75,7 @@
         <div class="overlay"></div>
         <div class="container">
             <div class="row no-gutters slider-text justify-content-start align-items-center justify-content-center">
-                <div class="col-lg-8 ftco-animate">
+                <div class="col-lg-8 ">
                     <div class="text w-100 text-center mb-md-5 pb-md-5">
                         <h1 class="mb-4">Find Your Dream Car at Ndoch Cars & Imports</h1>
                         <p style="font-size: 20px">
@@ -105,7 +105,7 @@
                 <div class="col-md-12 featured-top">
                     <div class="row no-gutters">
                         <div class="col-md-4 d-flex align-items-center">
-                            <form class="request-form ftco-animate bg-primary">
+                            <form class="request-form  bg-primary">
                                 @csrf
                                 <h2>Search Vehicle</h2>
                                 <div class="form-group">
@@ -128,16 +128,8 @@
                                     <input type="number" class="form-control" id="min-year" name="min_year"
                                         placeholder="Minimum Year" />
                                 </div>
-                                <div class="form-group">
-                                    <label for="user-name" class="label">Your Name</label>
-                                    <input type="text" class="form-control" id="user-name" name="user_name"
-                                        placeholder="Your Name" />
-                                </div>
-                                <div class="form-group">
-                                    <label for="user-phone" class="label">Your Phone Number</label>
-                                    <input type="tel" class="form-control" id="user-phone" name="user_phone"
-                                        placeholder="Your Phone Number" />
-                                </div>
+
+
                                 <div class="form-group">
                                     <input type="submit" value="Search" class="btn btn-secondary py-3 px-4" />
                                 </div>
@@ -157,7 +149,7 @@
                                     Discover the Perfect Car for You
                                 </h3>
                                 <div class="row d-flex mb-4">
-                                    <div class="col-md-4 d-flex align-self-stretch ftco-animate">
+                                    <div class="col-md-4 d-flex align-self-stretch ">
                                         <div class="services w-100 text-center">
                                             <div class="icon d-flex align-items-center justify-content-center">
                                                 <i class="fas fa-car"></i>
@@ -171,7 +163,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-4 d-flex align-self-stretch ftco-animate">
+                                    <div class="col-md-4 d-flex align-self-stretch ">
                                         <div class="services w-100 text-center">
                                             <div class="icon d-flex align-items-center justify-content-center">
                                                 <i class="fas fa-dollar-sign"></i>
@@ -182,7 +174,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-4 d-flex align-self-stretch ftco-animate">
+                                    <div class="col-md-4 d-flex align-self-stretch ">
                                         <div class="services w-100 text-center">
                                             <div class="icon d-flex align-items-center justify-content-center">
                                                 <i class="fas fa-handshake"></i>
@@ -214,7 +206,7 @@
     <section class="ftco-section ftco-no-pt bg-light">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-md-12 heading-section text-center ftco-animate mb-5">
+                <div class="col-md-12 heading-section text-center  mb-5">
                     <span class="subheading">What we offer</span>
                     <h2 class="mb-2">Feeatured Vehicles</h2>
                 </div>
@@ -231,7 +223,7 @@
         <div class="overlay"></div>
         <div class="container">
             <div class="row justify-content-end">
-                <div class="col-md-6 heading-section heading-section-white ftco-animate">
+                <div class="col-md-6 heading-section heading-section-white ">
                     <h2 class="mb-3">Join Our Team and Start Selling Cars Today!</h2>
                     <p>
                         We're looking for passionate individuals who want to earn with us
@@ -249,7 +241,7 @@
     <section class="ftco-section bg-light">
         <div class="container">
             <div class="row justify-content-center mb-5 pb-3">
-                <div class="col-md-7 heading-section ftco-animate text-center">
+                <div class="col-md-7 heading-section  text-center">
                     <span class="subheading">Why Choose Ndoch Cars & Imports</span>
                     <h2 class="mb-4">Exceptional Quality and Value</h2>
                     <p>
@@ -262,7 +254,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-4 d-flex align-self-stretch ftco-animate">
+                <div class="col-md-4 d-flex align-self-stretch ">
                     <div class="media block-6 services d-block text-center">
                         <div class="icon d-flex justify-content-center align-items-center mb-3">
                             <span class="flaticon-quality"><i class="fas fa-check-circle"></i></span>
@@ -277,7 +269,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 d-flex align-self-stretch ftco-animate">
+                <div class="col-md-4 d-flex align-self-stretch ">
                     <div class="media block-6 services d-block text-center">
                         <div class="icon d-flex justify-content-center align-items-center mb-3">
                             <span class="flaticon-deal"><i class="fas fa-tag"></i></span>
@@ -292,7 +284,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 d-flex align-self-stretch ftco-animate">
+                <div class="col-md-4 d-flex align-self-stretch ">
                     <div class="media block-6 services d-block text-center">
                         <div class="icon d-flex justify-content-center align-items-center mb-3">
                             <span class="flaticon-customer-service"><i class="fas fa-user-friends"></i></span>
