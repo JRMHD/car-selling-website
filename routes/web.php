@@ -86,3 +86,5 @@ Route::get('/car', [CarController::class, 'index']);
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/posts/create', [PostController::class, 'create'])->name('posts.create');
 });
+
+Route::post('/vehicles', 'VehicleController@store')->name('vehicle.store');

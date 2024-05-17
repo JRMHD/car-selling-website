@@ -26,6 +26,16 @@ class Post extends Model
         'body_type',
         'mileage',
         'status',
+        'condition',
         'image',
+    ];
+
+    /**
+     * The attributes that should be cast to native types.
+     *
+     * @var array
+     */
+    protected $casts = [
+        'image' => 'array',
     ];
 }

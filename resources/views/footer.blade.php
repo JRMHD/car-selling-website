@@ -59,7 +59,7 @@
                              <li>
                                  <a href="tel:+254712345678">
                                      <span class="icon icon-phone"></span>
-                                     <span class="text">+254 712 345 678</span>
+                                     <span class="text">+254 741 874 561</span>
                                  </a>
                              </li>
                              <li>

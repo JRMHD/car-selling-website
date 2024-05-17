@@ -71,12 +71,13 @@
     <!-- END nav -->
 
     <div class="hero-wrap ftco-degree-bg" style="background-image: url('images/bg_1.jpg')"
-        data-stellar-background-ratio="0.5">
+        data-stellar-background-ratio="0.5" style="margin-top: 0;">
         <div class="overlay"></div>
         <div class="container">
             <div class="row no-gutters slider-text justify-content-start align-items-center justify-content-center">
                 <div class="col-lg-8 ">
-                    <div class="text w-100 text-center mb-md-5 pb-md-5">
+                    <div class="text w-100 text-center mb-md-5 pb-md-5" style="margin-top: 50px;">
+                        <h1 class="mb-4">ndochcars.com</h1>
                         <h1 class="mb-4">Find Your Dream Car at Ndoch Cars & Imports</h1>
                         <p style="font-size: 20px">
                             Ndoch Cars & Imports is your one-stop destination for all types
@@ -104,45 +105,27 @@
             <div class="row no-gutters">
                 <div class="col-md-12 featured-top">
                     <div class="row no-gutters">
-                        <div class="col-md-4 d-flex align-items-center">
-                            <form class="request-form  bg-primary">
-                                @csrf
-                                <h2>Search Vehicle</h2>
-                                <div class="form-group">
-                                    <label for="car-make" class="label">Car Make</label>
-                                    <input type="text" class="form-control" id="car-make" name="car_make"
-                                        placeholder="e.g., Toyota, BMW, Honda" />
+                        <div class="col-md-4 d-flex align-items-center justify-content-center"
+                            style="margin: 0 auto;">
+                            <div
+                                style="width: 100%; max-width: 350px; text-align: center; padding: 40px 20px; background-color: #f8f9fa; border-radius: 15px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                                <h2 style="color: #333; margin-bottom: 30px; font-size: 24px;">Quick Access
+                                </h2>
+                                <div style="margin-bottom: 20px;">
+                                    <a href="/car" class="btn"
+                                        style="display: inline-block; background-color: #28a745; color: white; padding: 15px 30px; font-size: 18px; border-radius: 30px; text-decoration: none; transition: background-color 0.3s ease, transform 0.3s ease;">
+                                        Car Listings
+                                    </a>
                                 </div>
-                                <div class="form-group">
-                                    <label for="car-model" class="label">Car Model</label>
-                                    <input type="text" class="form-control" id="car-model" name="car_model"
-                                        placeholder="e.g., Corolla, X5, Civic" />
+                                <div>
+                                    <a href="/contact" class="btn"
+                                        style="display: inline-block; background-color: #17a2b8; color: white; padding: 15px 30px; font-size: 18px; border-radius: 30px; text-decoration: none; transition: background-color 0.3s ease, transform 0.3s ease;">
+                                        Contact Us
+                                    </a>
                                 </div>
-                                <div class="form-group">
-                                    <label for="max-price" class="label">Maximum Price</label>
-                                    <input type="number" class="form-control" id="max-price" name="max_price"
-                                        placeholder="Maximum Price in KES" />
-                                </div>
-                                <div class="form-group">
-                                    <label for="min-year" class="label">Minimum Year</label>
-                                    <input type="number" class="form-control" id="min-year" name="min_year"
-                                        placeholder="Minimum Year" />
-                                </div>
-
-
-                                <div class="form-group">
-                                    <input type="submit" value="Search" class="btn btn-secondary py-3 px-4" />
-                                </div>
-                                @if (session('success'))
-                                    <div class="alert alert-success">
-                                        {{ session('success') }}
-                                    </div>
-                                @endif
-                            </form>
-
-
-
+                            </div>
                         </div>
+
                         <div class="col-md-8 d-flex align-items-center">
                             <div class="services-wrap rounded-right w-100">
                                 <h3 class="heading-section mb-4">

@@ -24,7 +24,7 @@
             <p><strong>Mileage:</strong> {{ $post->mileage }}</p>
             <p><strong>Price:</strong> {{ $post->price }}</p>
             <p><strong>Status:</strong> {{ $post->status }}</p>
-
+            <p><strong>Condition:</strong> {{ $post->condition }}</p>
             @if ($post->image)
                 <img src="{{ asset('storage/' . $post->image) }}" alt="{{ $post->name }}" width="300">
             @endif

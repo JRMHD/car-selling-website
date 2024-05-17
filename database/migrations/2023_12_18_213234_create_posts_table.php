@@ -29,11 +29,11 @@ return new class extends Migration
             $table->text('body_type');
             $table->text('mileage');
             $table->text('status');
-            $table->text('image')->nullable();
+            $table->text('condition');
+            $table->json('image')->nullable(); // Change the column type to json
             $table->timestamps();
         });
     }
-
 
     /**
      * Reverse the migrations.

@@ -14,11 +14,6 @@ class PostController extends Controller
         return view('user.index', compact('posts'));
     }
 
-
-
-
-
-
     public function create()
     {
         if (auth()->check()) {
@@ -33,30 +28,33 @@ class PostController extends Controller
         $validatedData = $request->validate([
             'name' => 'required',
             'model' => 'required',
-            'transmission' => 'required',
-            'drive' => 'required',
-            'engine_type' => 'required',
-            'engine_size' => 'required',
-            'fuel' => 'required',
-            'year' => 'required',
-            'chessis' => 'required',
-            'color' => 'required',
-            'doors' => 'required',
-            'seats' => 'required',
+            'transmission' => 'nullable',
+            'drive' => 'nullable',
+            'engine_type' => 'nullable',
+            'engine_size' => 'nullable',
+            'fuel' => 'nullable',
+            'year' => 'nullable',
+            'chessis' => 'nullable',
+            'color' => 'nullable',
+            'doors' => 'nullable',
+            'seats' => 'nullable',
             'price' => 'required',
-            'body_type' => 'required',
-            'mileage' => 'required',
+            'body_type' => 'nullable',
+            'mileage' => 'nullable',
             'status' => 'required',
-            'image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:100000',
-        ], [
-            // Custom error messages
+            'condition' => 'required',
+            'image.*' => 'image|mimes:jpeg,png,jpg,gif,svg|max:10000', // Validate each image file
         ]);
 
-        $postData = $request->all();
+        $postData = $request->except('image'); // Exclude image data from $postData
 
         if ($request->hasFile('image')) {
-            $imagePath = $request->file('image')->store('images', 'public');
-            $postData['image'] = $imagePath;
+            $imagePaths = [];
+            foreach ($request->file('image') as $image) {
+                $imagePath = $image->store('images', 'public');
+                $imagePaths[] = $imagePath;
+            }
+            $postData['image'] = $imagePaths;
         }
 
         $post = Post::create($postData);
@@ -85,38 +83,42 @@ class PostController extends Controller
         $validatedData = $request->validate([
             'name' => 'required',
             'model' => 'required',
-            'transmission' => 'required',
-            'drive' => 'required',
-            'engine_type' => 'required',
-            'engine_size' => 'required',
-            'fuel' => 'required',
-            'year' => 'required',
-            'color' => 'required',
-            'doors' => 'required',
-            'seats' => 'required',
+            'transmission' => 'nullable',
+            'drive' => 'nullable',
+            'engine_type' => 'nullable',
+            'engine_size' => 'nullable',
+            'fuel' => 'nullable',
+            'year' => 'nullable',
+            'color' => 'nullable',
+            'doors' => 'nullable',
+            'seats' => 'nullable',
             'price' => 'required',
-            'body_type' => 'required',
-            'mileage' => 'required',
+            'body_type' => 'nullable',
+            'mileage' => 'nullable',
             'status' => 'required',
-            'image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:10000',
-        ], [
-            // Custom error messages
+            'condition' => 'required',
+            'image.*' => 'image|mimes:jpeg,png,jpg,gif,svg|max:10000', // Validate each image file
         ]);
 
-        $postData = $request->all();
+        $postData = $request->except('image'); // Exclude image data from $postData
+        $post = Post::findOrFail($id);
 
         if ($request->hasFile('image')) {
-            // Delete the old image if it exists
-            $post = Post::findOrFail($id);
+            // Delete the old images if they exist
             if ($post->image) {
-                Storage::delete($post->image);
+                foreach ($post->image as $imagePath) {
+                    Storage::delete($imagePath);
+                }
             }
 
-            $imagePath = $request->file('image')->store('images', 'public');
-            $postData['image'] = $imagePath;
+            $imagePaths = [];
+            foreach ($request->file('image') as $image) {
+                $imagePath = $image->store('images', 'public');
+                $imagePaths[] = $imagePath;
+            }
+            $postData['image'] = $imagePaths;
         }
 
-        $post = Post::findOrFail($id);
         $updated = $post->update($postData);
 
         if ($updated) {

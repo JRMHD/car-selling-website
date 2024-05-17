@@ -199,7 +199,7 @@
     </div>
     <div style="display: flex; justify-content: space-between; margin-top: 20px;">
         <div style="text-align: left;">
-            <a href="{{ url('welcome') }}"
+            <a href="{{ url('/') }}"
                 style="display: inline-block; padding: 10px 20px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 5px; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); transition: all 0.3s ease;">Go
                 Home</a>
         </div>

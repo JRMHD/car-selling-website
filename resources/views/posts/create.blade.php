@@ -130,6 +130,14 @@
             <input type="text" name="price" id="price" required>
         </div>
         <div>
+            <label for="condition">Condition</label>
+            <select name="condition" id="condition" required>
+                <option value="Foreign Used">Foreign Used</option>
+                <option value="Local Used">Local Used</option>
+                <option value="Brand New">Brand New</option>
+            </select>
+        </div>
+        <div>
             <label for="transmission">Transmission</label>
             <input type="text" name="transmission" id="transmission" required>
         </div>
@@ -182,9 +190,14 @@
             <input type="text" name="status" id="status" required>
         </div>
         <div>
-            <label for="image">Image</label>
-            <input type="file" name="image" id="image">
+            <label for="image">Images</label>
+            <input type="file" name="image[]" id="image" multiple>
+            <div id="imagePreview" class="image-preview"></div>
+
+
         </div>
+
+
         <button type="submit">Submit</button>
         @if ($errors->any())
             <div class="alert alert-danger">
@@ -204,6 +217,80 @@
 
     </form>
 
+
+    <style>
+        .drop - zone {
+            border: 2 px dashed #ddd;
+            border - radius: 5 px;
+            padding: 20 px;
+            text - align: center;
+            cursor: pointer;
+            margin - bottom: 20 px;
+        }
+
+        .drop - zone__prompt {
+            font - size: 16 px;
+            color: #777;
+        }
+
+        .image-preview {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+
+        .image-preview img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+    </style>
+    <script>
+        // Handle file input change
+        const fileInput = document.getElementById('image');
+
+        fileInput.addEventListener('change', function() {
+            handleFiles(this.files);
+        });
+
+        // Display image previews
+        function handleFiles(files) {
+            const preview = document.getElementById('imagePreview');
+            preview.innerHTML = '';
+
+            for (const file of files) {
+                if (file.type.startsWith('image/')) {
+                    const img = document.createElement('img');
+                    img.classList.add('preview-image');
+                    img.file = file;
+                    preview.appendChild(img);
+
+                    const reader = new FileReader();
+                    reader.onload = (function(aImg) {
+                        return function(e) {
+                            aImg.src = e.target.result;
+                        };
+                    })(img);
+
+                    reader.readAsDataURL(file);
+                }
+            }
+
+            const counter = document.createElement('p');
+            counter.textContent = `Number of images: ${files.length}`;
+            preview.appendChild(counter);
+        }
+
+        // Remove image from preview
+        document.getElementById('imagePreview').addEventListener('click', function(e) {
+            if (e.target && e.target.matches('img.preview-image')) {
+                e.target.parentNode.removeChild(e.target);
+            }
+        });
+    </script>
 </body>
 
 </html>

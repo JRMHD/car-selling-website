@@ -27,7 +27,7 @@ class CarRequestController extends Controller
         // Send email notification to the website owner
         Mail::to('ndochcars@gmail.com')->send(new CarRequestNotification($carRequest));
 
-       
+
 
         // Redirect back with success message
         return back()->with('success', 'Your car request has been submitted successfully.');
