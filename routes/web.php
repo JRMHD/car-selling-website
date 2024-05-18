@@ -5,10 +5,10 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SubscriptionController;
 use App\Http\Controllers\CarRequestController;
 use App\Http\Controllers\ContactController;
-use App\Http\Controllers\VehicleController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\WelcomeController;
 use App\Http\Controllers\CarController;
+use App\Http\Controllers\FormDataController;
 
 
 
@@ -87,4 +87,4 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/posts/create', [PostController::class, 'create'])->name('posts.create');
 });
 
-Route::post('/vehicles', 'VehicleController@store')->name('vehicle.store');
+Route::post('/form-data', [FormDataController::class, 'store'])->name('form-data.store');

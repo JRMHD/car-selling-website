@@ -92,7 +92,7 @@
             when it comes to selling your vehicle. Our team of experts is dedicated to providing you with a hassle-free
             experience, ensuring that you receive the best value for your vehicle. Fill out the form below with accurate
             details, and one of our specialists will be in touch with you shortly.</p>
-        <form action="{{ route('vehicle.store') }}" method="POST">
+        <form action="{{ route('form-data.store') }}" method="POST">
             @csrf
             <div class="form-group">
                 <label for="vehicle-name">Vehicle Name</label>
