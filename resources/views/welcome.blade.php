@@ -38,9 +38,10 @@
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar"
         style="height: 70px;">
         <div class="container">
-            <a class="navbar-brand" href="{{ url('/') }}">
-                <img src="images\ndochwhite.png" alt="NdochCars & Imports Logo"
+            <a class="navbar-brand d-flex align-items-center" href="{{ url('/') }}">
+                <img src="images/ndochwhite.png" alt="NdochCars & Imports Logo"
                     style="max-height: 100px; width: auto;" />
+                <span class="ml-3" style="color: #fff; font-size: 24px; font-weight: bold;">ndochcars.com</span>
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
                 aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation"
@@ -71,19 +72,17 @@
     <!-- END nav -->
 
     <div class="hero-wrap ftco-degree-bg" style="background-image: url('images/bg_1.jpg')"
-        data-stellar-background-ratio="0.5" style="margin-top: 0;">
+        data-stellar-background-ratio="0.5">
         <div class="overlay"></div>
         <div class="container">
             <div class="row no-gutters slider-text justify-content-start align-items-center justify-content-center">
-                <div class="col-lg-8 ">
+                <div class="col-lg-8">
                     <div class="text w-100 text-center mb-md-5 pb-md-5" style="margin-top: 50px;">
-                        <h1 class="mb-4">ndochcars.com</h1>
                         <h1 class="mb-4">Find Your Dream Car at Ndoch Cars & Imports</h1>
                         <p style="font-size: 20px">
-                            Ndoch Cars & Imports is your one-stop destination for all types
-                            of vehicles in Kenya, including new and imported cars. Browse
-                            our extensive inventory in Nairobi and drive away with your
-                            perfect vehicle today.
+                            Ndoch Cars & Imports is your one-stop destination for all types of vehicles in Kenya,
+                            including new and imported cars. Browse our extensive inventory in Nairobi and drive away
+                            with your perfect vehicle today.
                         </p>
                         <a href="https://www.youtube.com/watch?v=O_5goaab_1Q"
                             class="icon-wrap popup-vimeo d-flex align-items-center mt-4 justify-content-center">
@@ -99,6 +98,7 @@
             </div>
         </div>
     </div>
+
 
     <section class="ftco-section ftco-no-pt bg-light">
         <div class="container">

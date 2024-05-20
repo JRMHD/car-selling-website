@@ -23,8 +23,8 @@
                         </div>
                     </div>
                     <div class="filter-section">
-                        <div class="filter-header">
-                            <h3>Filter Vehicles</h3>
+                        <div class="filter-header" style="display: flex; align-items: center; gap: 1rem;">
+                            <h3 style="margin: 0;"> Advanced search</h3>
                             <button class="btn btn-primary" id="filterButton">Filter Vehicles</button>
                         </div>
                         <div class="filter-body" style="display: none;">
@@ -147,13 +147,24 @@
             </div>
         </div>
     </div>
+    <div class="sort-section">
+        <label for="sortOption">Sort By:</label>
+        <select id="sortOption">
+            <option value="">Default</option>
+            <option value="year-desc">Year - New to Old</option>
+            <option value="year-asc">Year - Old to New</option>
+            <option value="price-asc">Price - Low to High</option>
+            <option value="price-desc">Price - High to Low</option>
+        </select>
+    </div>
     <div class="row" style="display: flex; flex-wrap: wrap; justify-content: space-between;" id="vehiclesList">
         @forelse ($posts as $post)
             <div class="col-lg-3 col-md-4 col-sm-6 mb-4 vehicle-item">
                 <div class="card h-100 vehicle-card"
                     style="border: none; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); border-radius: 15px;">
                     @if (is_array($post->image) && count($post->image) > 0)
-                        <div id="carouselExampleIndicators{{ $post->id }}" class="carousel slide" data-ride="false">
+                        <div id="carouselExampleIndicators{{ $post->id }}" class="carousel slide"
+                            data-ride="false">
                             <ol class="carousel-indicators">
                                 @foreach ($post->image as $key => $image)
                                     <li data-target="#carouselExampleIndicators{{ $post->id }}"
@@ -258,7 +269,64 @@
 </div>
 
 
+<!-- Add this code inside the `filterVehicles` function after the existing code -->
 
+
+<style>
+    .sort-section {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1rem;
+    }
+
+    .sort-section label {
+        margin-right: 0.5rem;
+        font-weight: bold;
+    }
+
+    .sort-section select {
+        padding: 0.5rem;
+        border-radius: 0.25rem;
+        border: 1px solid #ccc;
+    }
+</style>
+
+<script>
+    const sortOption = document.getElementById('sortOption');
+
+    sortOption.addEventListener('change', function() {
+        const vehicleItems = Array.from(vehiclesList.querySelectorAll('.vehicle-item'));
+        const sortValue = this.value;
+
+        if (sortValue) {
+            const [sortBy, sortOrder] = sortValue.split('-');
+
+            vehicleItems.sort((a, b) => {
+                const aValue = sortBy === 'year' ?
+                    parseInt(a.querySelector('.vehicle-details p:nth-child(7)').textContent.split(':')[
+                        1]) :
+                    parseInt(a.querySelector('.card-text strong + span').textContent.replace(/[^0-9]/g,
+                        ''));
+
+                const bValue = sortBy === 'year' ?
+                    parseInt(b.querySelector('.vehicle-details p:nth-child(7)').textContent.split(':')[
+                        1]) :
+                    parseInt(b.querySelector('.card-text strong + span').textContent.replace(/[^0-9]/g,
+                        ''));
+
+                if (aValue < bValue) {
+                    return sortOrder === 'asc' ? -1 : 1;
+                }
+                if (aValue > bValue) {
+                    return sortOrder === 'asc' ? 1 : -1;
+                }
+                return 0;
+            });
+        }
+
+        vehicleItems.forEach(item => vehiclesList.appendChild(item));
+    });
+</script>
 
 
 <script>
