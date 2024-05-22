@@ -41,7 +41,7 @@
             <a class="navbar-brand d-flex align-items-center" href="{{ url('/') }}">
                 <img src="images/ndochwhite.png" alt="NdochCars & Imports Logo"
                     style="max-height: 100px; width: auto;" />
-                <span class="ml-3" style="color: #fff; font-size: 24px; font-weight: bold;">ndochcars.com</span>
+                <span class="ml-3" style="color:#01d28e; font-size: 24px; font-weight: bold;">ndochcars.com</span>
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
                 aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation"
