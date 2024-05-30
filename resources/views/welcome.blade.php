@@ -35,70 +35,181 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar"
-        style="height: 70px;">
+    <!-- Top bar -->
+    <div class="top-bar">
+        <div class="container d-flex justify-content-between">
+            <div>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+                <span>|</span>
+                <a href="tel:0741874561"><i class="fas fa-phone-alt"></i>0741874561</a>
+                <span>|</span>
+                <a href="mailto:ndochcars@gmail.com"><i class="fas fa-envelope"></i> ndochcars@gmail.com</a>
+            </div>
+            {{-- <div>
+                <a href="#"><i class="fas fa-user"></i> Register</a>
+                <a href="#"><i class="fas fa-sign-in-alt"></i> Login</a>
+            </div> --}}
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center" href="{{ url('/') }}">
-                <img src="images/ndochwhite.png" alt="NdochCars & Imports Logo"
-                    style="max-height: 100px; width: auto;" />
-                <span class="ml-3" style="color:#01d28e; font-size: 24px; font-weight: bold;">ndochcars.com</span>
+                <img src="images/ndochwhite.png" alt="NdochCars & Imports Logo">
+                <span class="ml-3">ndochcars.com</span>
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
-                aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation"
-                style="height: 30px; padding: 5px;">
-                <span class="oi oi-menu" style="font-size: 20px;"></span>
+                aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="ftco-nav">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active">
-                        <a href="{{ url('/') }}" class="nav-link" style="font-size: 14px;">Home</a>
+                        <a href="{{ url('/') }}" class="nav-link">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a href="{{ url('about') }}" class="nav-link" style="font-size: 14px;">About</a>
+                        <a href="{{ url('about') }}" class="nav-link">About</a>
                     </li>
                     <li class="nav-item">
-                        <a href="{{ url('services') }}" class="nav-link" style="font-size: 14px;">Services</a>
+                        <a href="{{ url('services') }}" class="nav-link">Services</a>
                     </li>
                     <li class="nav-item">
-                        <a href="{{ url('car') }}" class="nav-link" style="font-size: 14px;">Cars</a>
+                        <a href="{{ url('car') }}" class="nav-link">Cars</a>
                     </li>
                     <li class="nav-item">
-                        <a href="{{ url('contact') }}" class="nav-link" style="font-size: 14px;">Contact</a>
+                        <a href="{{ url('contact') }}" class="nav-link">Contact</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
-    <!-- END nav -->
 
-    <div class="hero-wrap ftco-degree-bg" style="background-image: url('images/bg_1.jpg')"
-        data-stellar-background-ratio="0.5">
-        <div class="overlay"></div>
-        <div class="container">
-            <div class="row no-gutters slider-text justify-content-start align-items-center justify-content-center">
-                <div class="col-lg-8">
-                    <div class="text w-100 text-center mb-md-5 pb-md-5" style="margin-top: 50px;">
-                        <h1 class="mb-4">Find Your Dream Car at Ndoch Cars & Imports</h1>
-                        <p style="font-size: 20px">
-                            Ndoch Cars & Imports is your one-stop destination for all types of vehicles in Kenya,
-                            including new and imported cars. Browse our extensive inventory in Nairobi and drive away
-                            with your perfect vehicle today.
-                        </p>
-                        <a href="https://www.youtube.com/watch?v=O_5goaab_1Q"
-                            class="icon-wrap popup-vimeo d-flex align-items-center mt-4 justify-content-center">
-                            <div class="icon d-flex align-items-center justify-content-center">
-                                <span class="ion-ios-play"></span>
-                            </div>
-                            <div class="heading-title ml-5">
-                                <span>Watch Our Showroom Tour</span>
-                            </div>
-                        </a>
-                    </div>
+    <div class="">
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="images/ndochbanner1.svg" alt="First slide">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/NDOCHBANNER2.jpg" alt="Second slide">
                 </div>
             </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
         </div>
     </div>
 
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        /* Top bar styling */
+        .top-bar {
+            background-color: #01d28e;
+            color: #ffffff;
+            padding: 5px 0;
+        }
+
+        .top-bar a {
+            color: #ffffff;
+            margin: 0 10px;
+        }
+
+        /* Navbar styling */
+        .navbar {
+            background-color: #ffffff;
+            /* Change navbar to white */
+            border-bottom: 2px solid #01d28e;
+            /* Add a border */
+        }
+
+        .navbar-brand img {
+            max-height: 70px;
+            /* Adjust logo size */
+        }
+
+        .navbar-brand span {
+            color: #01d28e;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .nav-link {
+            color: #333333;
+            /* Change link color to dark */
+            font-size: 16px;
+        }
+
+        .nav-link:hover {
+            color: #01d28e;
+            /* Hover color */
+        }
+
+        /* Hero section styling */
+        .hero-wrap {
+            background: linear-gradient(to right, #01d28e, #ffffff);
+            /* Gradient background */
+            padding: 40px 0;
+        }
+
+        .carousel-item img {
+            width: 100%;
+            height: auto;
+        }
+
+        .carousel-indicators li {
+            background-color: #01d28e;
+        }
+
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            background-color: #01d28e;
+        }
+
+        .hero-text {
+            text-align: center;
+            color: #ffffff;
+            margin-top: -50px;
+        }
+
+        .hero-text h1 {
+            font-size: 48px;
+            font-weight: bold;
+        }
+
+        .hero-text p {
+            font-size: 24px;
+        }
+    </style>
+    <section class="ftco-section ftco-no-pt bg-light">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-12 heading-section text-center  mb-5">
+                    <span class="subheading">What we offer</span>
+                    <h2 class="mb-2">Feeatured Vehicles</h2>
+                </div>
+            </div>
+            @include('user.index', ['posts' => $posts])
+        </div>
+    </section>
 
     <section class="ftco-section ftco-no-pt bg-light">
         <div class="container">
@@ -185,22 +296,6 @@
     </section>
 
 
-
-    <section class="ftco-section ftco-no-pt bg-light">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-md-12 heading-section text-center  mb-5">
-                    <span class="subheading">What we offer</span>
-                    <h2 class="mb-2">Feeatured Vehicles</h2>
-                </div>
-            </div>
-
-
-            @include('user.index', ['posts' => $posts])
-
-
-        </div>
-    </section>
 
     <section class="ftco-section ftco-intro" style="background-image: url(images/bg_3.jpg)">
         <div class="overlay"></div>
@@ -297,7 +392,8 @@
                 stroke-miterlimit="10" stroke="#F96D00" />
         </svg>
     </div>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery-migrate-3.0.1.min.js"></script>
     <script src="js/popper.min.js"></script>

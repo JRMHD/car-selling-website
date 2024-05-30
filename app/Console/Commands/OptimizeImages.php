@@ -25,17 +25,17 @@ class OptimizeImages extends Command
      * Execute the console command.
      */
     public function handle()
-{
-    $imagesPath = storage_path('app/public/images');
-    $images = glob($imagesPath . '/*');
+    {
+        $imagesPath = storage_path('app/public/images');
+        $images = glob($imagesPath . '/*');
 
-    foreach ($images as $image) {
-        $img = Image::make($image);
-        $img->optimize();
-        $img->save();
-        $this->info('Optimized: ' . basename($image));
+        foreach ($images as $image) {
+            $img = Image::make($image);
+            $img->optimize();
+            $img->save();
+            $this->info('Optimized: ' . basename($image));
+        }
+
+        $this->info('All images optimized successfully!');
     }
-
-    $this->info('All images optimized successfully!');
-}
 }

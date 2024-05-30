@@ -26,7 +26,15 @@
                         <div class="filter-header" style="display: flex; align-items: center; gap: 1rem;">
                             <h3 style="margin: 0;"> Advanced search</h3>
                             <button class="btn btn-primary" id="filterButton">Filter Vehicles</button>
+                            <button class="btn btn-danger" id="clearFiltersButton"
+                                style="background-color: #dc3545; border-color: #dc3545; color: #fff; border-radius: 20px; padding: 8px 16px; font-size: 16px; margin-left: 10px;">
+                                Clear Filters <span
+                                    style="font-weight: bold; font-size: 20px; line-height: 1; margin-left: 5px;">×</span>
+                            </button>
+
+                            <!-- New button added -->
                         </div>
+
                         <div class="filter-body" style="display: none;">
                             <div class="filter-item">
                                 <h4 class="mb-3">Price</h4>
@@ -86,55 +94,81 @@
                         </div>
                     </div>
 
+                    <script>
+                        // Function to clear all filters
+                        function clearFilters() {
+                            document.getElementById("priceFilter").value = "";
+                            document.getElementById("makeFilter").value = "";
+                            document.getElementById("modelFilter").value = "";
+                            document.getElementById("yearMin").value = "";
+                            document.getElementById("yearMax").value = "";
+                            document.getElementById("conditionFilter").value = "";
+                            document.getElementById("colorFilter").value = "";
+                            document.getElementById("sortOption").value = "";
+                            document.getElementById("sortOption").value = "";
+                            document.getElementById("searchInput").value = "";
+
+                            // Code to reset any other filter elements
+                            // Implement your code to reset any other filter elements here
+
+                            // After resetting filters, reapply filter function
+                            filterVehicles(); // Assuming you have a function to filter vehicles already defined
+                        }
+
+                        // Event listener for clear filters button
+                        document.getElementById("clearFiltersButton").addEventListener("click", clearFilters);
+                    </script>
+
 
                     <style>
                         .filter-section {
-                            background-color: #f8f9fa;
-                            border-radius: 8px;
-                            padding: 20px;
-                            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                            background-color: #ffffff;
+                            border-radius: 12px;
+                            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+                            padding: 15px;
                         }
 
                         .filter-header {
                             display: flex;
                             justify-content: space-between;
                             align-items: center;
-                            margin-bottom: 20px;
+                            margin-bottom: 10px;
                         }
 
                         .filter-body {
-                            display: grid;
-                            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-                            gap: 20px;
+                            display: flex;
+                            flex-wrap: wrap;
+                            gap: 15px;
                         }
 
                         .filter-item {
-                            background-color: #fff;
-                            border-radius: 8px;
-                            padding: 20px;
+                            background-color: #f0f0f0;
+                            border-radius: 12px;
+                            padding: 12px;
                             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                            flex: 1;
                         }
 
                         .form-control {
-                            border-radius: 20px;
-                            padding: 10px 15px;
-                            font-size: 16px;
-                            border: 1px solid #ccc;
+                            border: 1px solid #ced4da;
+                            border-radius: 8px;
+                            padding: 8px;
+                            font-size: 14px;
+                            width: 100%;
                         }
 
                         .btn-primary {
                             background-color: #007bff;
-                            border-color: #007bff;
+                            border: 1px solid #007bff;
                             color: #fff;
-                            transition: background-color 0.3s, border-color 0.3s;
-                            font-size: 16px;
                             padding: 8px 16px;
-                            border-radius: 20px;
+                            border-radius: 8px;
+                            cursor: pointer;
+                            transition: background-color 0.3s, border-color 0.3s;
                         }
 
                         .btn-primary:hover {
-                            background-color: #0069d9;
-                            border-color: #0062cc;
+                            background-color: #0056b3;
                         }
                     </style>
 
