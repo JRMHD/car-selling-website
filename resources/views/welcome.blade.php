@@ -199,7 +199,20 @@
             font-size: 24px;
         }
     </style>
-    <section class="ftco-section ftco-no-pt bg-light">
+
+    <section style="text-align: center; background-color: #f7f7f7; padding: 40px 0;">
+        <div>
+            <span class="subheading"
+                style="color: #0077b6; font-size: 18px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">What
+                we offer</span>
+            <h2 class="mb-2" style="color: #333; font-size: 36px; font-weight: 700; margin-top: 10px;">Featured
+                Vehicles</h2>
+
+        </div>
+    </section>
+    @include('user.index', ['posts' => $posts])
+
+    {{-- <section class="ftco-section ftco-no-pt bg-light">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-12 heading-section text-center  mb-5">
@@ -207,9 +220,9 @@
                     <h2 class="mb-2">Feeatured Vehicles</h2>
                 </div>
             </div>
-            @include('user.index', ['posts' => $posts])
+            
         </div>
-    </section>
+    </section> --}}
 
     <section class="ftco-section ftco-no-pt bg-light">
         <div class="container">
