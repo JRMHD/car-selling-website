@@ -35,8 +35,7 @@
 </head>
 
 <body>
-    <!-- Top bar -->
-    <div class="top-bar">
+    <div class="top-bar" style="background-color: black;">
         <div class="container d-flex justify-content-between">
             <div>
                 <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -49,17 +48,18 @@
                 <a href="mailto:ndochcars@gmail.com"><i class="fas fa-envelope"></i> ndochcars@gmail.com</a>
             </div>
             {{-- <div>
-                <a href="#"><i class="fas fa-user"></i> Register</a>
-                <a href="#"><i class="fas fa-sign-in-alt"></i> Login</a>
-            </div> --}}
+            <a href="#"><i class="fas fa-user"></i> Register</a>
+            <a href="#"><i class="fas fa-sign-in-alt"></i> Login</a>
+        </div> --}}
         </div>
     </div>
     <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center" href="{{ url('/') }}">
                 <img src="images/ndochwhite.png" alt="NdochCars & Imports Logo">
-                <span class="ml-3">ndochcars.com</span>
+                <span class="ml-3" style="color: gold;">ndochcars.com</span>
             </a>
+
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
                 aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>

@@ -145,16 +145,16 @@
             <label for="drive">Drive</label>
             <input type="text" name="drive" id="drive" required>
         </div>
-        <div>
+        {{-- <div>
             <label for="engine_type">Engine Number</label>
             <input type="text" name="engine_type" id="engine_type" required>
         </div>
         <div>
             <label for="chessis">Chessis/Frame Number</label>
             <input type="text" name="chessis" id="chessis" required>
-        </div>
+        </div> --}}
         <div>
-            <label for="engine_size">Rating(CC)</label>
+            <label for="engine_size">Engine Size(CC)</label>
             <input type="text" name="engine_size" id="engine_size" required>
         </div>
         <div>

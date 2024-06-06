@@ -91,7 +91,9 @@
                                     <option value="White">White</option>
                                 </select>
                             </div>
+                            <button class="btn btn-primary" id="filterButton">Filter Vehicles</button>
                         </div>
+
                     </div>
 
                     <script>
@@ -252,9 +254,9 @@
                     <div class="vehicle-details" style="display: none; padding: 20px;">
                         <p><strong>Transmission:</strong> {{ $post->transmission }}</p>
                         <p><strong>Drive:</strong> {{ $post->drive }}</p>
-                        <p><strong>Engine Number:</strong> {{ $post->engine_type }}</p>
-                        <p><strong>Chessis/Frame Number:</strong> {{ $post->chessis }}</p>
-                        <p><strong>Rating(CC):</strong> {{ $post->engine_size }}</p>
+                        {{-- <p><strong>Engine Number:</strong> {{ $post->engine_type }}</p>
+                        <p><strong>Chessis/Frame Number:</strong> {{ $post->chessis }}</p> --}}
+                        <p><strong>Engine Size(CC):</strong> {{ $post->engine_size }}</p>
                         <p><strong>Fuel Type:</strong> {{ $post->fuel }}</p>
                         <p><strong>Year of Manufacture:</strong> {{ $post->year }}</p>
                         <p><strong>Color:</strong> {{ $post->color }}</p>
@@ -405,6 +407,10 @@
         "Honda": ["Accord", "Accord Hybrid", "Civic", "Civic Si", "Civic Type R", "Clarity", "CR-V", "Fit", "HR-V",
             "Insight", "Odyssey", "Passport", "Pilot", "Ridgeline"
         ],
+
+        "Honda Fit Shuttle": ["15X", "Hybrid", "Hybrid Smart Selection", "Hybrid Navi Selection"],
+
+
         "Hyundai": ["Accent", "Elantra", "Elantra GT", "Entourage", "Equus", "Genesis", "Ioniq", "Kona", "Nexo",
             "Palisade", "Santa Cruz", "Santa Fe", "Sonata", "Tucson", "Veloster", "Venue", "Veracruz"
         ],
