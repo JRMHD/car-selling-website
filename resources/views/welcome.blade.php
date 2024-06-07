@@ -85,7 +85,30 @@
             </div>
         </div>
     </nav>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <style>
+        /* Custom Navbar Styling */
+        .navbar {
+            background-color: black !important;
+            /* Use !important to override Bootstrap's default */
+        }
 
+        /* Link Styling */
+        .navbar-brand span,
+        /* Brand text (ndochcars.com) */
+        .nav-link {
+            /* Navigation links */
+            color: gold !important;
+            /* Gold text */
+        }
+
+        /* Active Link Styling (optional) */
+        .nav-item.active .nav-link {
+            font-weight: bold;
+            color: white !important;
+            /* Or a brighter gold if you prefer */
+        }
+    </style>
     <div class="">
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
