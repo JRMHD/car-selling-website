@@ -8,180 +8,177 @@
     <div class="container-fluid" style="max-width: 1200px; margin: 0 auto;">
         <div class="row justify-content-center mb-4">
             <div class="col-lg-10 col-md-12">
-                <div class="search-filter-section"
-                    style="background-color: #fff; border-radius: 10px; padding: 20px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); display: flex; flex-wrap: wrap; justify-content: center; align-items: center;">
-                    <div class="search-section" style="flex-basis: 60%; margin-right: 20px;">
-                        <h4 class="mb-3" style="color: #333; font-size: 20px; font-weight: bold;">Search Vehicle</h4>
+                <div class="search-filter-section shadow rounded p-4 mb-4" style="background-color: #fff;">
+
+                    <div class="search-section mb-3" style="width: 100%;">
+                        <h4 class="mb-2" style="color: #333; font-size: 20px; font-weight: bold;">Search Vehicle</h4>
                         <div class="input-group">
-                            <input type="text" class="form-control" id="searchInput"
-                                placeholder="Simply write the vehicle name and press the search button (i.e. demio or vitz)"
-                                style="border-radius: 20px 0 0 20px; border-right: none; padding: 10px 15px; font-size: 16px; border: 1px solid #ccc;">
+                            <input type="text" class="form-control rounded-left" id="searchInput"
+                                placeholder="Simply write the vehicle name and press the search button (i.e. demio or vitz)">
                             <div class="input-group-append">
-                                <button class="btn btn-primary" id="searchButton"
-                                    style="border-radius: 0 20px 20px 0; background-color: #007bff; border-color: #007bff; transition: background-color 0.3s, border-color 0.3s; font-size: 16px; font-weight: bold;">Search</button>
+                                <button class="btn btn-primary rounded-right" id="searchButton">Search</button>
                             </div>
                         </div>
                     </div>
-                    <div class="filter-section">
-                        <div class="filter-header" style="display: flex; align-items: center; gap: 1rem;">
-                            <h3 style="margin: 0;"> Advanced search</h3>
-                            <button class="btn btn-primary" id="filterButton">Filter Vehicles</button>
-                            <button class="btn btn-danger" id="clearFiltersButton"
-                                style="background-color: #dc3545; border-color: #dc3545; color: #fff; border-radius: 20px; padding: 8px 16px; font-size: 16px; margin-left: 10px;">
-                                Clear Filters <span
-                                    style="font-weight: bold; font-size: 20px; line-height: 1; margin-left: 5px;">×</span>
-                            </button>
 
-                            <!-- New button added -->
+                    <div class="filter-section mt-3">
+                        <div class="filter-header mb-3">
+                            <h3 style="margin: 0; display: inline;">Advanced Search</h3>
+                            <div class="float-right">
+                                <button class="btn btn-primary" id="filterButton">Filter Vehicles</button>
+                                <button class="btn btn-danger" id="clearFiltersButton">Clear Filters &times;</button>
+                            </div>
                         </div>
 
                         <div class="filter-body" style="display: none;">
-                            <div class="filter-item">
-                                <h4 class="mb-3">Price</h4>
-                                <select class="form-control" id="priceFilter">
-                                    <option value="">All</option>
-                                    <option value="0-500,000">0 - 500K</option>
-                                    <option value="500,000-1,000,000">500K - 1M</option>
-                                    <option value="1,000,000-2,000,000">1M - 2M</option>
-                                    <option value="2,000,000-3,000,000">2M - 3M</option>
-                                    <option value="3,000,000-5,000,000">3M - 5M</option>
-                                    <option value="5,000,000-10,000,000">5M - 10M</option>
-                                    <option value="10,000,000-999,999,999">Above 10M</option>
-                                </select>
-                            </div>
-                            <div class="filter-item">
-                                <h4 class="mb-3">Car Make</h4>
-                                <select class="form-control" id="makeFilter">
-                                    <option value="">All</option>
-                                </select>
-                            </div>
-                            <div class="filter-item">
-                                <h4 class="mb-3">Car Model</h4>
-                                <select class="form-control" id="modelFilter">
-                                    <option value="">All</option>
-                                </select>
-                            </div>
-                            <div class="filter-item">
-                                <h4 class="mb-3">Year of Manufacture</h4>
-                                <div style="display: flex; align-items: center;">
-                                    <input type="number" class="form-control" id="yearMin" placeholder="Min"
-                                        style="border-radius: 20px 0 0 20px; border-right: none; padding: 10px 15px; font-size: 16px; border: 1px solid #ccc; flex: 1;">
-                                    <span style="padding: 0 10px;">-</span>
-                                    <input type="number" class="form-control" id="yearMax" placeholder="Max"
-                                        style="border-radius: 0 20px 20px 0; padding: 10px 15px; font-size: 16px; border: 1px solid #ccc; flex: 1;">
+                            <div class="row">
+                                <div class="col-12 col-sm-6 col-md-4 mb-3">
+                                    <label for="priceFilter">Price</label>
+                                    <select class="form-control" id="priceFilter">
+                                        <option value="">All</option>
+                                        <option value="0-500,000">0 - 500K</option>
+                                        <option value="500,000-1,000,000">500K - 1M</option>
+                                        <option value="1,000,000-2,000,000">1M - 2M</option>
+                                        <option value="2,000,000-3,000,000">2M - 3M</option>
+                                        <option value="3,000,000-5,000,000">3M - 5M</option>
+                                        <option value="5,000,000-10,000,000">5M - 10M</option>
+                                        <option value="10,000,000-999,999,999">Above 10M</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-12 col-sm-6 col-md-4 mb-3">
+                                    <label for="makeFilter">Car Make</label>
+                                    <select class="form-control" id="makeFilter">
+                                        <option value="">All</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-12 col-sm-6 col-md-4 mb-3">
+                                    <label for="modelFilter">Car Model</label>
+                                    <select class="form-control" id="modelFilter">
+                                        <option value="">All</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-12 col-md-6 mb-3">
+                                    <label for="yearMin">Year of Manufacture</label>
+                                    <div class="input-group">
+                                        <input type="number" class="form-control" id="yearMin" placeholder="Min">
+                                        <div class="input-group-text">-</div>
+                                        <input type="number" class="form-control" id="yearMax" placeholder="Max">
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-sm-6 col-md-3 mb-3">
+                                    <label for="conditionFilter">Condition</label>
+                                    <select class="form-control" id="conditionFilter">
+                                        <option value="">All</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-12 col-sm-6 col-md-3 mb-3">
+                                    <label for="colorFilter">Color</label>
+                                    <select class="form-control" id="colorFilter">
+                                        <option value="">Any</option>
+                                    </select>
                                 </div>
                             </div>
-                            <div class="filter-item">
-                                <h4 class="mb-3">Condition</h4>
-                                <select class="form-control" id="conditionFilter">
-                                    <option value="">All</option>
-                                    <option value="Foreign Used">Foreign Used</option>
-                                    <option value="Local Used">Local Used</option>
-                                    <option value="Brand New">Brand New</option>
-                                </select>
-                            </div>
-                            <div class="filter-item">
-                                <h4 class="mb-3">Color</h4>
-                                <select class="form-control" id="colorFilter">
-                                    <option value="">Any</option>
-                                    <option value="Black">Black</option>
-                                    <option value="Blue">Blue</option>
-                                    <option value="Gray">Gray</option>
-                                    <option value="Silver">Silver</option>
-                                    <option value="White">White</option>
-                                </select>
-                            </div>
-                            <button class="btn btn-primary" id="filterButton">Filter Vehicles</button>
+
+                            <button class="btn btn-primary mt-3" id="filterButton">Filter Vehicles</button>
                         </div>
-
                     </div>
-
-                    <script>
-                        // Function to clear all filters
-                        function clearFilters() {
-                            document.getElementById("priceFilter").value = "";
-                            document.getElementById("makeFilter").value = "";
-                            document.getElementById("modelFilter").value = "";
-                            document.getElementById("yearMin").value = "";
-                            document.getElementById("yearMax").value = "";
-                            document.getElementById("conditionFilter").value = "";
-                            document.getElementById("colorFilter").value = "";
-                            document.getElementById("sortOption").value = "";
-                            document.getElementById("sortOption").value = "";
-                            document.getElementById("searchInput").value = "";
-
-                            // Code to reset any other filter elements
-                            // Implement your code to reset any other filter elements here
-
-                            // After resetting filters, reapply filter function
-                            filterVehicles(); // Assuming you have a function to filter vehicles already defined
-                        }
-
-                        // Event listener for clear filters button
-                        document.getElementById("clearFiltersButton").addEventListener("click", clearFilters);
-                    </script>
-
-
-                    <style>
-                        .filter-section {
-                            background-color: #ffffff;
-                            border-radius: 12px;
-                            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-                            padding: 15px;
-                        }
-
-                        .filter-header {
-                            display: flex;
-                            justify-content: space-between;
-                            align-items: center;
-                            margin-bottom: 10px;
-                        }
-
-                        .filter-body {
-                            display: flex;
-                            flex-wrap: wrap;
-                            gap: 15px;
-                        }
-
-                        .filter-item {
-                            background-color: #f0f0f0;
-                            border-radius: 12px;
-                            padding: 12px;
-                            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-                            flex: 1;
-                        }
-
-                        .form-control {
-                            border: 1px solid #ced4da;
-                            border-radius: 8px;
-                            padding: 8px;
-                            font-size: 14px;
-                            width: 100%;
-                        }
-
-                        .btn-primary {
-                            background-color: #007bff;
-                            border: 1px solid #007bff;
-                            color: #fff;
-                            padding: 8px 16px;
-                            border-radius: 8px;
-                            cursor: pointer;
-                            transition: background-color 0.3s, border-color 0.3s;
-                        }
-
-                        .btn-primary:hover {
-                            background-color: #0056b3;
-                        }
-                    </style>
-
-
-
-
-
-
                 </div>
             </div>
         </div>
+    </div>
+
+
+    <script>
+        // Function to clear all filters
+        function clearFilters() {
+            document.getElementById("priceFilter").value = "";
+            document.getElementById("makeFilter").value = "";
+            document.getElementById("modelFilter").value = "";
+            document.getElementById("yearMin").value = "";
+            document.getElementById("yearMax").value = "";
+            document.getElementById("conditionFilter").value = "";
+            document.getElementById("colorFilter").value = "";
+            document.getElementById("sortOption").value = "";
+            document.getElementById("sortOption").value = "";
+            document.getElementById("searchInput").value = "";
+
+            // Code to reset any other filter elements
+            // Implement your code to reset any other filter elements here
+
+            // After resetting filters, reapply filter function
+            filterVehicles(); // Assuming you have a function to filter vehicles already defined
+        }
+
+        // Event listener for clear filters button
+        document.getElementById("clearFiltersButton").addEventListener("click", clearFilters);
+    </script>
+
+
+    <style>
+        .filter-section {
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+        }
+
+        .filter-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .filter-body {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .filter-item {
+            background-color: #f0f0f0;
+            border-radius: 12px;
+            padding: 12px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            flex: 1;
+        }
+
+        .form-control {
+            border: 1px solid #ced4da;
+            border-radius: 8px;
+            padding: 8px;
+            font-size: 14px;
+            width: 100%;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border: 1px solid #007bff;
+            color: #fff;
+            padding: 8px 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s, border-color 0.3s;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+    </style>
+
+
+
+
+
+
+    </div>
+    </div>
+    </div>
     </div>
     <div class="sort-section">
         <label for="sortOption">Sort By:</label>
@@ -199,8 +196,7 @@
                 <div class="card h-100 vehicle-card"
                     style="border: none; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); border-radius: 15px;">
                     @if (is_array($post->image) && count($post->image) > 0)
-                        <div id="carouselExampleIndicators{{ $post->id }}" class="carousel slide"
-                            data-ride="false">
+                        <div id="carouselExampleIndicators{{ $post->id }}" class="carousel slide" data-ride="false">
                             <ol class="carousel-indicators">
                                 @foreach ($post->image as $key => $image)
                                     <li data-target="#carouselExampleIndicators{{ $post->id }}"
