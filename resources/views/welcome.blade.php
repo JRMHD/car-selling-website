@@ -233,7 +233,13 @@
 
         </div>
     </section>
-    @include('user.index', ['posts' => $posts])
+
+
+    <section>
+        <div>
+            @include('user.index', ['posts' => $posts])
+        </div>
+    </section>
 
     {{-- <section class="ftco-section ftco-no-pt bg-light">
         <div class="container">
@@ -247,85 +253,96 @@
         </div>
     </section> --}}
 
+
+    <section class="ftco-section ftco-intro">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row justify-content-end">
+                <div class="row no-gutters">
+                    <div class="col-md-4 d-flex align-items-center justify-content-center" style="margin: 0 auto;">
+                        <div
+                            style="width: 100%; max-width: 350px; text-align: center; padding: 40px 20px; background-color: #f8f9fa; border-radius: 15px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                            <h2 style="color: #333; margin-bottom: 30px; font-size: 24px;">Quick Access
+                            </h2>
+                            <div style="margin-bottom: 20px;">
+                                <a href="/car" class="btn"
+                                    style="display: inline-block; background-color: #28a745; color: white; padding: 15px 30px; font-size: 18px; border-radius: 30px; text-decoration: none; transition: background-color 0.3s ease, transform 0.3s ease;">
+                                    Car Listings
+                                </a>
+                            </div>
+                            <div>
+                                <a href="/contact" class="btn"
+                                    style="display: inline-block; background-color: #17a2b8; color: white; padding: 15px 30px; font-size: 18px; border-radius: 30px; text-decoration: none; transition: background-color 0.3s ease, transform 0.3s ease;">
+                                    Contact Us
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-8 d-flex align-items-center">
+                        <div class="services-wrap rounded-right w-100">
+                            <h3 class="heading-section mb-4">
+                                Discover the Perfect Car for You
+                            </h3>
+                            <div class="row d-flex mb-4">
+                                <div class="col-md-4 d-flex align-self-stretch ">
+                                    <div class="services w-100 text-center">
+                                        <div class="icon d-flex align-items-center justify-content-center">
+                                            <i class="fas fa-car"></i>
+                                        </div>
+                                        <div class="text w-100">
+                                            <h3 class="heading mb-2">Wide Selection of Cars</h3>
+                                            <p>
+                                                Explore our diverse range of cars from top
+                                                manufacturers.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 d-flex align-self-stretch ">
+                                    <div class="services w-100 text-center">
+                                        <div class="icon d-flex align-items-center justify-content-center">
+                                            <i class="fas fa-dollar-sign"></i>
+                                        </div>
+                                        <div class="text w-100">
+                                            <h3 class="heading mb-2">Great Prices</h3>
+                                            <p>Find competitive prices that fit your budget.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 d-flex align-self-stretch ">
+                                    <div class="services w-100 text-center">
+                                        <div class="icon d-flex align-items-center justify-content-center">
+                                            <i class="fas fa-handshake"></i>
+                                        </div>
+                                        <div class="text w-100">
+                                            <h3 class="heading mb-2">Quality Assurance</h3>
+                                            <p>
+                                                Buy with confidence knowing each car undergoes
+                                                rigorous quality checks.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <p>
+                                <a href="{{ url('car') }}" class="btn btn-primary py-3 px-4">Browse Our
+                                    Inventory</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
     <section class="ftco-section ftco-no-pt bg-light">
         <div class="container">
             <div class="row no-gutters">
                 <div class="col-md-12 featured-top">
-                    <div class="row no-gutters">
-                        <div class="col-md-4 d-flex align-items-center justify-content-center"
-                            style="margin: 0 auto;">
-                            <div
-                                style="width: 100%; max-width: 350px; text-align: center; padding: 40px 20px; background-color: #f8f9fa; border-radius: 15px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
-                                <h2 style="color: #333; margin-bottom: 30px; font-size: 24px;">Quick Access
-                                </h2>
-                                <div style="margin-bottom: 20px;">
-                                    <a href="/car" class="btn"
-                                        style="display: inline-block; background-color: #28a745; color: white; padding: 15px 30px; font-size: 18px; border-radius: 30px; text-decoration: none; transition: background-color 0.3s ease, transform 0.3s ease;">
-                                        Car Listings
-                                    </a>
-                                </div>
-                                <div>
-                                    <a href="/contact" class="btn"
-                                        style="display: inline-block; background-color: #17a2b8; color: white; padding: 15px 30px; font-size: 18px; border-radius: 30px; text-decoration: none; transition: background-color 0.3s ease, transform 0.3s ease;">
-                                        Contact Us
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-8 d-flex align-items-center">
-                            <div class="services-wrap rounded-right w-100">
-                                <h3 class="heading-section mb-4">
-                                    Discover the Perfect Car for You
-                                </h3>
-                                <div class="row d-flex mb-4">
-                                    <div class="col-md-4 d-flex align-self-stretch ">
-                                        <div class="services w-100 text-center">
-                                            <div class="icon d-flex align-items-center justify-content-center">
-                                                <i class="fas fa-car"></i>
-                                            </div>
-                                            <div class="text w-100">
-                                                <h3 class="heading mb-2">Wide Selection of Cars</h3>
-                                                <p>
-                                                    Explore our diverse range of cars from top
-                                                    manufacturers.
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4 d-flex align-self-stretch ">
-                                        <div class="services w-100 text-center">
-                                            <div class="icon d-flex align-items-center justify-content-center">
-                                                <i class="fas fa-dollar-sign"></i>
-                                            </div>
-                                            <div class="text w-100">
-                                                <h3 class="heading mb-2">Great Prices</h3>
-                                                <p>Find competitive prices that fit your budget.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4 d-flex align-self-stretch ">
-                                        <div class="services w-100 text-center">
-                                            <div class="icon d-flex align-items-center justify-content-center">
-                                                <i class="fas fa-handshake"></i>
-                                            </div>
-                                            <div class="text w-100">
-                                                <h3 class="heading mb-2">Quality Assurance</h3>
-                                                <p>
-                                                    Buy with confidence knowing each car undergoes
-                                                    rigorous quality checks.
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <p>
-                                    <a href="{{ url('car') }}" class="btn btn-primary py-3 px-4">Browse Our
-                                        Inventory</a>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>

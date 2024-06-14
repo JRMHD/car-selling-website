@@ -5,13 +5,70 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Post;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Config;
 
 class PostController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $posts = Post::latest()->paginate(12); // Paginate the posts
-        return view('user.index', compact('posts'));
+        $query = $request->input('query');
+        $make = $request->input('make');
+        $model = $request->input('model');
+        $startYear = $request->input('start_year');
+        $endYear = $request->input('end_year');
+        $condition = $request->input('condition');
+        $color = $request->input('color');
+        $priceRange = $request->input('price_range');
+
+        $posts = Post::query();
+
+        if ($query) {
+            $posts->where('name', 'LIKE', "%$query%")
+                ->orWhere('model', 'LIKE', "%$query%");
+        }
+
+        if ($make) {
+            $posts->where('name', $make);
+        }
+
+        if ($model) {
+            $posts->where('model', $model);
+        }
+
+        if ($startYear && $endYear) {
+            $posts->whereBetween('year', [$startYear, $endYear]);
+        } elseif ($startYear) {
+            $posts->where('year', '>=', $startYear);
+        } elseif ($endYear) {
+            $posts->where('year', '<=', $endYear);
+        }
+
+        if ($condition) {
+            $posts->where('condition', $condition);
+        }
+
+        if ($color) {
+            $posts->where('color', $color);
+        }
+
+        if ($priceRange) {
+            $range = explode('-', $priceRange);
+            $min = (int) $range[0];
+            $max = (int) $range[1];
+            $posts->whereBetween('price', [$min, $max]);
+        }
+
+        $posts = $posts->paginate(150);
+
+        $carData = Config::get('carData');
+        $carMakes = array_keys($carData);
+        $carModels = [];
+
+        if ($make) {
+            $carModels = $carData[$make] ?? [];
+        }
+
+        return view('welcome', compact('posts', 'query', 'make', 'model', 'startYear', 'endYear',  'condition', 'color', 'priceRange', 'carMakes', 'carModels'));
     }
 
     public function create()

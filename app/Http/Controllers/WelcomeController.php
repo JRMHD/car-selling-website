@@ -9,7 +9,7 @@ class WelcomeController extends Controller
 {
     public function welcome()
     {
-        $posts = Post::latest()->paginate(9);
+        $posts = Post::latest()->paginate(12);
         return view('welcome', compact('posts'));
     }
 }

@@ -13,6 +13,7 @@ use App\Http\Controllers\FormDataController;
 
 
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -41,6 +42,9 @@ Route::get('car', function () {
 });
 Route::get('contact', function () {
     return view('contact');
+});
+Route::get('filters', function () {
+    return view('filters');
 });
 Route::get('sellwithus', function () {
     return view('sellwithus');
@@ -88,3 +92,5 @@ Route::group(['middleware' => 'auth'], function () {
 });
 
 Route::post('/form-data', [FormDataController::class, 'store'])->name('form-data.store');
+
+Route::get('/posts', [PostController::class, 'index'])->name('posts.index');
