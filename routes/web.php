@@ -94,3 +94,5 @@ Route::group(['middleware' => 'auth'], function () {
 Route::post('/form-data', [FormDataController::class, 'store'])->name('form-data.store');
 
 Route::get('/posts', [PostController::class, 'index'])->name('posts.index');
+Route::get('/filters', [PostController::class, 'index'])->name('filters.index');
+Route::get('/vehicle/{id}', [PostController::class, 'show'])->name('vehicle.show');

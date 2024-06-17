@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Collection;
 use App\Models\Post;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Config;
@@ -19,6 +20,8 @@ class PostController extends Controller
         $condition = $request->input('condition');
         $color = $request->input('color');
         $priceRange = $request->input('price_range');
+        $name = $request->input('name');
+        $model = $request->input('model');
 
         $posts = Post::query();
 
@@ -27,12 +30,12 @@ class PostController extends Controller
                 ->orWhere('model', 'LIKE', "%$query%");
         }
 
-        if ($make) {
-            $posts->where('name', $make);
+        if ($name) {
+            $posts->where('name', 'LIKE', "%$name%");
         }
 
         if ($model) {
-            $posts->where('model', $model);
+            $posts->where('model', 'LIKE', "%$model%");
         }
 
         if ($startYear && $endYear) {
@@ -126,7 +129,7 @@ class PostController extends Controller
     public function show($id)
     {
         $post = Post::findOrFail($id);
-        return view('user.cardisp', compact('post'));
+        return view('user.index', compact('post'));
     }
 
     public function edit($id)

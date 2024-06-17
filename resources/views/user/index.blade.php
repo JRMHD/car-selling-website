@@ -1,4 +1,9 @@
+<!-- Include jQuery and Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.min.js"></script>
 <!-- CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css">
 
 <!-- JavaScript -->
@@ -12,8 +17,19 @@
 
 <div class="container mt-5">
     <!-- Button to toggle filters -->
-    <div class="d-flex justify-content-center">
-        <button id="filterButton" class="btn btn-primary btn-lg">Filter Vehicles</button>
+    <style>
+        .filter-button {
+            margin-right: 20px;
+        }
+    </style>
+
+    <div class="d-flex justify-content-center align-items-center mb-4">
+        <button id="filterButton" class="btn btn-primary btn-lg filter-button">
+            <i class="fas fa-filter"></i> Filter Vehicles
+        </button>
+        <a href="{{ route('posts.index') }}" class="btn btn-outline-danger btn-lg">
+            <i class="fas fa-times"></i> Clear Filters
+        </a>
     </div>
 
     <!-- Filter section -->
@@ -28,19 +44,6 @@
     }
 </style>
 
-
-<!-- Include jQuery and Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.min.js"></script>
-
-<script>
-    $(document).ready(function() {
-        $('#filterButton').click(function() {
-            $('#filterSection').slideToggle();
-        });
-    });
-</script>
 
 <div class="sort-section">
     <label for="sortOption">Sort By:</label>
@@ -219,5 +222,13 @@
         }
 
         vehicleItems.forEach(item => vehiclesList.appendChild(item));
+    });
+</script>
+
+<script>
+    $(document).ready(function() {
+        $('#filterButton').click(function() {
+            $('#filterSection').slideToggle();
+        });
     });
 </script>
