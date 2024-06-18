@@ -124,7 +124,7 @@
                     <p><strong>Body Type:</strong> {{ $post->body_type }}</p>
                     <p><strong>Mileage:</strong> {{ $post->mileage }}</p>
                     <div class="d-flex justify-content-between">
-                        <a href="https://wa.me/254714428171?text=I'm%20interested%20in%20{{ urlencode($post->name) }}"
+                        <a href="https://wa.me/254714428171?text=I'm%20interested%20in%20{{ urlencode($post->name) }}%20-%20Image%20Link:%20{{ urlencode(asset('storage/' . $post->image[0])) }}"
                             class="btn btn-success btn-sm whatsapp-btn" style="border-radius: 20px;">
                             <i class="fab fa-whatsapp mr-2"></i> <span>Enquire Via WhatsApp</span>
                         </a>
