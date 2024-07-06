@@ -103,7 +103,7 @@ class PostController extends Controller
             'mileage' => 'nullable',
             'status' => 'required',
             'condition' => 'required',
-            'image.*' => 'image|mimes:jpeg,png,jpg,gif,svg|max:10000', // Validate each image file
+            'image.*' => 'image|mimes:jpeg,png,jpg,gif,svg|max:50000', // Validate each image file
         ]);
 
         $postData = $request->except('image'); // Exclude image data from $postData
